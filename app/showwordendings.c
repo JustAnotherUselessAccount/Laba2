@@ -41,7 +41,7 @@ static void show_endings(int index, char *contents, int cursor, void *data)
     int flag = 0;
     for (size_t i = 0; i <= strlen(str); i++) {
         if (flag) {
-            for (int j = i - 1; j >= 0; j--) {
+            for (size_t j = i - 1; j >= 0; j--) {
                 if (str[j] >= 'a' && str[j] <= 'z') {
                     printf("%c ", str[j]);
                     flag = 0;
