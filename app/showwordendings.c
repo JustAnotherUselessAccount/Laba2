@@ -39,15 +39,16 @@ static void show_endings(int index, char *contents, int cursor, void *data)
 
     /* Выводим символы на экран на экран */
     int flag = 0;
-    for (size_t i = 0; i <= strlen(str); i++) {
+    for (int i = 0; i <= strlen(str); i++) {
         if (flag) {
-            for (size_t j = i - 1; j >= 0; j--) {
+            for (int j = i - 1; j >= 0; j--) {
                 if (str[j] >= 'a' && str[j] <= 'z') {
                     printf("%c ", str[j]);
                     flag = 0;
                     break;
                 }
             }
+            flag = 0;
         } else {
             if (str[i] == ' ' || str[i] == '\n' || str[i] == '\0') {
                 flag = 1;
