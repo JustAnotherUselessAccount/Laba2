@@ -10,30 +10,22 @@ set(CMAKE_C_FLAGS "-Wall -Wextra -Wpedantic -Wconversion -Wunreachable-code -Wol
 include(GoogleTest)
 
 set (TESTS
-        fibonachi_test.h
-        tst_stdout.h
-        tst_test1.h
+        tests.h
+        ../app/text/process_forward.c
+        ../app/text/remove_all.c
+        ../app/text/append_line.c
         )
 
 include_directories(${PROJECT_NAME} PUBLIC ../app)
-
-set (EXT_HEADERS
-
-        ../app/myfunc.h
-        )
-
-set (EXT_SOURCES
-        ../app/myfunc.c
-        )
 
 add_definitions(-DINPUTDIR="${PROJECT_SOURCE_DIR}/input")
 
 add_executable(${PROJECT_NAME} main.cpp ${TESTS} ${EXT_HEADERS} ${EXT_SOURCES})
 
-target_link_libraries(${PROJECT_NAME} gtest gtest_main gmock pthread)
+target_link_libraries(${PROJECT_NAME} gtest gtest_main gmock)# m )#pthread)
 
 # оценка покрытия кода тестами
-target_link_libraries(${PROJECT_NAME} gcov)
+# target_link_libraries(${PROJECT_NAME} gcov)
 
 gtest_add_tests(TARGET      ${PROJECT_NAME}
         TEST_SUFFIX .noArgs
