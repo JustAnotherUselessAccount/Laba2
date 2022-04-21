@@ -10,7 +10,6 @@ jobs:
       - run: git submodule init
       - run: git submodule update
       - run: pip install --user cpp-coveralls
-      - run: sudo apt update -y && sudo apt install libgtest-dev libgmock-dev -y 
       - run: cmake .
       - run: make
       - run: make test
