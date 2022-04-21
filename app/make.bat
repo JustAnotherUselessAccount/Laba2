@@ -1,0 +1,1 @@
+g++ editor.c load.c show.c text/append_line.c text/create_text.c text/process_forward.c text/remove_all.c save.c m.c showwordendings.c z.c dd.c -o editor.exe
