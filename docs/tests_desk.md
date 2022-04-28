@@ -58,4 +58,4 @@ __Ожидаемый результат__: txt->begin->contents = "sugomA\n"
 __Цель__: Проверить работу метода на файле test.txt на первой строке текста.
 __Тип__: Положительный  
 __Входные данные__: index = 0, position = 4  
-__Ожидаемый результат__: txt->begin->next->contents = "sugomA\n"  
+__Ожидаемый результат__: txt->begin->next->contents = Amogus\n"  
