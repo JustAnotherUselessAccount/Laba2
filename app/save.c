@@ -21,7 +21,7 @@ void save(text txt, char *filename)
 
     /* Проверяем, имеется ли текст */
     if (txt == NULL || txt->length == 0) {
-        fprintf(stderr, "There are already no any lines in the text!\n");
+        printf("There are already no any lines in the text!\n");
         return;
     } 
     
