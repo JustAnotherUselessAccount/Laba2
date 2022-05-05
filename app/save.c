@@ -15,7 +15,7 @@
 /**
  * Сохраняет текущий текст в файл
  */
-void save(text txt, char *filename)
+void save(text txt, const char *filename)
 {
     FILE *f;
 

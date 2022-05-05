@@ -33,12 +33,12 @@ void z(text txt);
 /**
  * Загружает содержимое указанного файла
  */
-void load(text txt, char *filename);
+void load(text txt, const char *filename);
 
 /**
  * Сохраняет текущий текст в файл
  */
-void save(text txt, char *filename);
+void save(text txt, const char *filename);
 
 /**
  * Дублирует текущую строку
