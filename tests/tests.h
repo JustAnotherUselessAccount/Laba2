@@ -41,9 +41,9 @@ TEST(save_tests, wrong_filename) {
     text txt = create_text();
     load(txt, filename.c_str());
     testing::internal::CaptureStdout();
-    save(txt, "?");
+    save(txt, "/run/mem");
     string output = testing::internal::GetCapturedStdout();
-    EXPECT_EQ(output, "The file ? cannot be opened\n");
+    EXPECT_EQ(output, "The file /run/mem cannot be opened\n");
 }
 
 TEST(save_tests, normal_save) {
