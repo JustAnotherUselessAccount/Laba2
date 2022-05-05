@@ -27,6 +27,7 @@ char* filename = "./app/input/test.txt";
 char* filename2 = "./app/input/test2.txt";
 char* filename3 = "./app/input/test3.txt";
 
+/*
 TEST(save_tests, empty_file) {
     text txt = create_text();
     testing::internal::CaptureStdout();
@@ -54,6 +55,7 @@ TEST(save_tests, normal_save) {
     str = txt->end->contents;
     EXPECT_EQ(str, "fff fff fff rgw seg sg");
 }
+*/
 
 TEST(move_tests, incorrect_index1) {
     text txt = create_text();
