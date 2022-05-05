@@ -23,9 +23,11 @@ extern "C" {
     #include "text/create_text.c"
 }
 
-std::string filename = "./app/input/test.txt";
-std::string filename2 = "./app/input/test2.txt";
-std::string filename3 = "./app/input/test3.txt";
+// INPUTDIR
+
+std::string filename = std::string(INPUTDIR) + std::string("/test.txt");
+std::string filename2 = std::string(INPUTDIR) + std::string("/test2.txt");
+std::string filename3 = std::string(INPUTDIR) + std::string("/test3.txt");
 
 TEST(save_tests, empty_file) {
     text txt = create_text();
